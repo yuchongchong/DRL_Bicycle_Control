@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="bicycle.SLDASM">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.011764 -2.2132E-05 -0.0052993"
+        rpy="0 0 0" />
+      <mass
+        value="17" />
+      <inertia
+        ixx="0.033131"
+        ixy="-3.4356E-05"
+        ixz="-0.013579"
+        iyy="0.16061"
+        iyz="4.4375E-06"
+        izz="0.13656" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bicycle.SLDASM/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.37647 0.37647 0.37647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bicycle.SLDASM/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="qiancha_Link">
+    <inertial>
+      <origin
+        xyz="2.4714E-07 3.317E-05 0.028377"
+        rpy="0 0 0" />
+      <mass
+        value="2.2831" />
+      <inertia
+        ixx="0.14106"
+        ixy="5.1432E-08"
+        ixz="-2.5747E-07"
+        iyy="0.11817"
+        iyz="7.5703E-06"
+        izz="0.023628" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bicycle.SLDASM/meshes/qiancha_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.33333 0.33333 0.33333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bicycle.SLDASM/meshes/qiancha_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="qiancha"
+    type="continuous">
+    <origin
+      xyz="0.49689 0 0.10599"
+      rpy="0 -0.34907 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="qiancha_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="qianlun_Link">
+    <inertial>
+      <origin
+        xyz="4.8833E-07 -0.0012351 2.6152E-07"
+        rpy="0 0 0" />
+      <mass
+        value="3.0053" />
+      <inertia
+        ixx="0.03375"
+        ixy="8.7404E-09"
+        ixz="6.6259E-08"
+        iyy="0.066193"
+        iyz="-9.9791E-09"
+        izz="0.03375" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bicycle.SLDASM/meshes/qianlun_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bicycle.SLDASM/meshes/qianlun_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="qianlun"
+    type="continuous">
+    <origin
+      xyz="0 -2.6147E-05 -0.35445"
+      rpy="0 0.34907 0" />
+    <parent
+      link="qiancha_Link" />
+    <child
+      link="qianlun_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="houlun_Link">
+    <inertial>
+      <origin
+        xyz="-9.1894E-07 -0.00014464 -1.0151E-07"
+        rpy="0 0 0" />
+      <mass
+        value="6" />
+      <inertia
+        ixx="0.033753"
+        ixy="0.00033059"
+        ixz="-2.7799E-08"
+        iyy="0.066189"
+        iyz="-1.1633E-08"
+        izz="0.03375" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bicycle.SLDASM/meshes/houlun_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bicycle.SLDASM/meshes/houlun_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="houlun"
+    type="continuous">
+    <origin
+      xyz="-0.27735 -0.0014058 -0.24406"
+      rpy="0 0 0.010191" />
+    <parent
+      link="base_link" />
+    <child
+      link="houlun_Link" />
+    <axis
+      xyz="0.010191 0.99995 0" />
+  </joint>
+</robot>

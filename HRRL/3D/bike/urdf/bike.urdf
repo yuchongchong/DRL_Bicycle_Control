@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="bike">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.032545 -3.354E-05 -0.24417"
+        rpy="0 0 0" />
+      <mass
+        value="1.9958" />
+      <inertia
+        ixx="0.12185"
+        ixy="-3.4075E-05"
+        ixz="-0.12657"
+        iyy="0.46746"
+        iyz="-5.4907E-05"
+        izz="0.34795" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bike/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bike/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="back_wheel_Link">
+    <inertial>
+      <origin
+        xyz="3.3105E-05 1.6191E-08 -0.00080583"
+        rpy="0 0 0" />
+      <mass
+        value="4.6592" />
+      <inertia
+        ixx="0.28202"
+        ixy="1.1463E-09"
+        ixz="7.9387E-05"
+        iyy="0.56256"
+        iyz="6.2043E-09"
+        izz="0.28159" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bike/meshes/back_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bike/meshes/back_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="back_wheel"
+    type="continuous">
+    <origin
+      xyz="-0.74414 0.0005 -0.62149"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="back_wheel_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="cha_Link">
+    <inertial>
+      <origin
+        xyz="-0.0069293 0.0010208 -0.1735"
+        rpy="0 0 0" />
+      <mass
+        value="0.96467" />
+      <inertia
+        ixx="0.12089"
+        ixy="-6.2558E-06"
+        ixz="0.0016233"
+        iyy="0.10274"
+        iyz="0.00042507"
+        izz="0.018692" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bike/meshes/cha_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bike/meshes/cha_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="qian_cha"
+    type="continuous">
+    <origin
+      xyz="0.45428 0 0.13535"
+      rpy="0.014856 -0.36774 -0.041303" />
+    <parent
+      link="base_link" />
+    <child
+      link="cha_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="forward_wheel_Link">
+    <inertial>
+      <origin
+        xyz="0.00039276 -0.005 -0.00070442"
+        rpy="0 0 0" />
+      <mass
+        value="4.6592" />
+      <inertia
+        ixx="0.28187"
+        ixy="-1.6564E-09"
+        ixz="0.00022018"
+        iyy="0.56256"
+        iyz="6.0679E-09"
+        izz="0.28175" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bike/meshes/forward_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bike/meshes/forward_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="forward_wheel"
+    type="continuous">
+    <origin
+      xyz="-0.0007326 0.0084594 -0.811"
+      rpy="0 0 0" />
+    <parent
+      link="cha_Link" />
+    <child
+      link="forward_wheel_Link" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+</robot>
